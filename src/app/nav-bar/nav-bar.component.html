@@ -1,0 +1,18 @@
+<ul ngbNav #nav="ngbNav" class="nav bg-light">
+    <li  [ngbNavItem]="1">
+        <a ngbNavLink routerLink="/">Home</a>
+    </li>
+    <li [ngbNavItem]="2">
+        <a ngbNavLink routerLink="/shopping-cart">Shopping Cart</a>
+    </li>
+    <li [ngbNavItem]="3"  ngbDropdown class="nav-item">
+        <a class="nav-link" ngbDropdownToggle>Username</a>
+        <div ngbDropdownMenu>
+        <button ngbDropdownItem routerLink="/order">My Orders</button>
+        <button ngbDropdownItem routerLink="/manage-order">Manage Orders</button>
+        <button ngbDropdownItem routerLink="/manage-product">Manage Products</button>
+        <div class="dropdown-divider"></div>
+        <button ngbDropdownItem>Log Out</button>
+        </div>
+    </li>
+</ul>
